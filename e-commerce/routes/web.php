@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\PhoneController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,3 +27,6 @@ Route::get('/phone', [PhoneController::class, 'index'])->name('phone');
 
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 
+Route::get('/connexion', [ConnexionController::class, 'index'])->name('connexion');
+
+Route::get('/inscription', [InscriptionController::class, 'index'])->name('inscription');
