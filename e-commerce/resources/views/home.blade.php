@@ -5,15 +5,18 @@
 @endsection
 
 @section('content')
-    <div class="space-y-5">
-        <div class="text-center px-5 py-11 mx-[200px]">
-            <h1 class="text-4xl">E-Commerce</h1>
+    <div class="space-y-5 w-full">
+        <div class="text-center px-5 py-11 bg-zinc-300">
+            <div class="mx-[200px]">
+                <h1 class="text-4xl">E-Commerce</h1>
 
-            <p class="text-lg font-extralight text-zinc-800">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum delectus ad quae cumque voluptates dolorum, neque eveniet, placeat obcaecati magnam vel fugit nulla autem, mollitia consequuntur praesentium sit? Veniam, facere.
-            </p>
+                <p class="text-lg font-extralight text-zinc-800">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum delectus ad quae cumque voluptates dolorum, neque eveniet, placeat obcaecati magnam vel fugit nulla autem, mollitia consequuntur praesentium sit? Veniam, facere.
+                </p>
+            </div>
         </div>
 
+        {{-- COUP DE COEUR --}}
         <div class="mx-[200px] flex justify-around">
             <div class="w-[1000px] h-[400px] bg-blue-100">
 
@@ -41,7 +44,7 @@
         </div>
 
         {{-- DERNIERS PRODUITS --}}
-        <div class="mx-[250px]">
+        <div class="mx-[250px] space-y-3">
             <div>
                 <h2 class="bg-blue-500 text-white p-2 rounded-t">DERNIERS PRODUITS</h2>
             </div>
@@ -108,7 +111,7 @@
         </div>
 
         {{-- MEILLEURS PRODUITS --}}
-        <div class="mx-[250px]">
+        <div class="mx-[250px] space-y-3">
             <div>
                 <h2 class="bg-blue-500 text-white p-2 rounded-t">MEILLEURS PRODUITS</h2>
             </div>
