@@ -5,5 +5,65 @@
 @endsection
 
 @section('content')
-    <h1>Contact</h1>
+    <div class="space-y-6">
+
+        <div class="w-full">
+
+            <div class="text-center px-5 py-11 bg-zinc-300">
+                <div class="mx-[200px]">
+                    <h1 class="text-4xl">Contact</h1>
+
+                    <p class="text-lg font-extralight text-zinc-800">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, veniam, eius aliquam quidem rem sunt nam quaerat facilis ex error placeat ipsa illo sed inventore soluta ipsum cumque atque ea?
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mx-[300px]">
+            <div>
+                <a href="{{ route('home') }}" class="text-blue-500">Accueil</a>
+                / Contact
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="mx-auto w-[400px] border space-y-6">
+            <h1 class="bg-blue-500 text-white p-2 rounded-t">Contactez-nous</h1>
+
+            <form class="space-y-6">
+                <div class="mx-auto w-[350px] grid">
+                    <label for="message">Nom</label>
+                    <input type="text" name="name" id="name" placeholder="Votre nom" class="border w-[300px] p-1">
+                </div>
+
+                <div class="mx-auto w-[350px] grid">
+                    <label for="message">E-mail</label>
+                    <input type="e-mail" name="email" id="email" placeholder="Votre E-mail" class="border w-[300px] p-1">
+                </div>
+
+                <div class="w-[300px] grid">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="3" class="border"></textarea>
+                </div>
+
+                <div class="flex justify-center">
+                    <button type="submit" class="bg-blue-500 text-white px-3 py-2 rounded">Envoyer</button>
+                </div>
+            </form>
+        </div>
+
+        <div>
+            <h1 class="bg-green-500 text-white p-2 rounded-t">ADRESSE</h1>
+
+            <div>
+                3 rue des Champs Elysées
+                75008 PARIS
+                France
+                Email : email@example.com
+                Tel. +33 12 56 11 51 84
+            </div>
+        </div>
+    </div>
 @endsection
