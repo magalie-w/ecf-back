@@ -33,6 +33,10 @@
                     <div>
                         <h2 class="bg-blue-500 text-white p-2 rounded-t">FILTRES</h2>
 
+                        {{-- @foreach ($colors as $color)
+                            {{ $color->color }}
+                        @endforeach --}}
+
                         <form class="space-y-3 p-2 border">
                             <div>
                                 <input type="checkbox" name="bleu" value="bleu" id="bleu">
@@ -58,11 +62,14 @@
                         <h2 class="bg-blue-500 text-white p-2 rounded-t">CATEGORIES</h2>
 
                         <ul class="border">
-                            <li class="p-2 border">Cras justo odio</li>
+                        @foreach ($categories as $category)
+                            <li class="p-2 border">{{ $category->slug }}</li>    
+                        @endforeach
+                            {{-- <li class="p-2 border">Cras justo odio</li>
                             <li class="p-2 border">Dapibus ac facilisis in</li>
                             <li class="p-2 border">Morbi leo risus</li>
                             <li class="p-2 border">Porta ac consectetur ac</li>
-                            <li class="p-2 border">Vestibulum at eros</li>
+                            <li class="p-2 border">Vestibulum at eros</li> --}}
                         </ul>
                     </div>
 
@@ -103,7 +110,7 @@
                             
                             <p class="text-blue-500 text-lg">{{ $product->title }}</p>
 
-                            {{-- <p class="text-center px-3">{{ $category->$slug }}</p> --}}
+                            <p class="text-center px-3">{{ $product->description }}</p>
 
                             <div class="flex justify-center space-x-6">
                                 <button type="button" class="bg-green-500 py-2 px-5 rounded">{{ $product->price }} €</button>

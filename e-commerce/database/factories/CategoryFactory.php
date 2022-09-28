@@ -19,7 +19,7 @@ class CategoryFactory extends Factory
     {
         return [
             // 'title' => Product::factory(),
-            'slug' => fake()->text(100),
+            'slug' => fake()->text(5),
         ];
     }
 }

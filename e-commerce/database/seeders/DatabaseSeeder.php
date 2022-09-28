@@ -30,11 +30,10 @@ class DatabaseSeeder extends Seeder
         ->create();
 
         Category::factory()
-        ->count(10)
+        ->count(1)
         ->create();
 
         Color::factory()
-        ->count(10)
         ->create();
     }
 }
