@@ -93,8 +93,8 @@
                 <div class="flex justify-between flex-wrap">
 
                     {{-- TELEPHONES --}}
-                    {{-- @foreach ($categories as $category) --}}
                     @foreach ($products as $product)
+                    {{-- @foreach ($categories as $category) --}}
 
                         <div class="w-[300px]">
                             <div class="w-[280px] h-[200px] bg-zinc-300">
@@ -103,8 +103,7 @@
                             
                             <p class="text-blue-500 text-lg">{{ $product->title }}</p>
 
-                        
-                            <p class="text-center px-3">{{ $product->slug }}</p>
+                            {{-- <p class="text-center px-3">{{ $category->$slug }}</p> --}}
 
                             <div class="flex justify-center space-x-6">
                                 <button type="button" class="bg-green-500 py-2 px-5 rounded">{{ $product->price }} €</button>

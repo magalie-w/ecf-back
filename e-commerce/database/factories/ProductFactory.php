@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Category;
+use App\Models\Color;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -30,6 +31,7 @@ class ProductFactory extends Factory
             // 'cover' => $cover[array_rand($cover)],
             'promo' => fake()->numberBetween(0, 100),
             'category_id' => Category::factory(),
+            'color_id' => Color::factory(),
         ];
     }
 
