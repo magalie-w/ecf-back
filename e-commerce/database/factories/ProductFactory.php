@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,19 +17,20 @@ class ProductFactory extends Factory
      */
     public function definition()
     {
-        // $heart = ['false', 'true'];
+        $heart = [false, true];
 
         return [
             'title' => fake()->sentence(3),
             'description' => fake()->text(),
             'price' => fake()->numberBetween(200, 900),
-            'slug' => fake()->text(),
+            // 'slug' => fake()->text(100),
             'released_at' => fake()->date(),
-            // 'heart' => $heart[array_rand($heart)],
+            'heart' => $heart[array_rand($heart)],
             'color' => fake()->text(),
             // 'cover' => $cover[array_rand($cover)],
             'promo' => fake()->numberBetween(0, 100),
-            // 'category_id' => Category::factory(),
+            'category_id' => Category::factory(),
         ];
     }
+
 }

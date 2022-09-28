@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('description');
             $table->integer('price');
-            $table->string('slug')->nullable();
+            // $table->string('slug')->nullable();
             $table->timestamp('released_at')->nullable();
             $table->boolean('heart')->nullable();
             $table->string('color');

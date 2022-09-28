@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+
     <div class="space-y-6">
 
         <div class="w-full">
@@ -92,22 +93,28 @@
                 <div class="flex justify-between flex-wrap">
 
                     {{-- TELEPHONES --}}
-                    <div class="w-[300px]">
-                        <div class="w-[280px] h-[200px] bg-zinc-300">
+                    {{-- @foreach ($categories as $category) --}}
+                    @foreach ($products as $product)
+
+                        <div class="w-[300px]">
+                            <div class="w-[280px] h-[200px] bg-zinc-300">
+                            
+                            </div>
+                            
+                            <p class="text-blue-500 text-lg">{{ $product->title }}</p>
+
                         
+                            <p class="text-center px-3">{{ $product->slug }}</p>
+
+                            <div class="flex justify-center space-x-6">
+                                <button type="button" class="bg-green-500 py-2 px-5 rounded">{{ $product->price }} €</button>
+                                <button type="button" class="bg-red-500 py-2 px-5 rounded">Ajouter</button>
+                            </div>
                         </div>
+                    {{-- @endforeach --}}
+                    @endforeach
 
-                        <p class="text-blue-500 text-lg">Produit</p>
-
-                        <p class="text-center px-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-
-                        <div class="flex justify-center space-x-6">
-                            <button type="button" class="bg-green-500 py-2 px-5 rounded">99,00 €</button>
-                            <button type="button" class="bg-red-500 py-2 px-5 rounded">Ajouter</button>
-                        </div>
-                    </div>
-
-                    <div class="w-[300px]">
+                    {{-- <div class="w-[300px]">
                         <div class="w-[280px] h-[200px] bg-zinc-300">
                         </div>
 
@@ -148,7 +155,7 @@
                             <button type="button" class="bg-green-500 py-2 px-5 rounded">99,00 €</button>
                             <button type="button" class="bg-red-500 py-2 px-5 rounded">Ajouter</button>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
