@@ -24,8 +24,7 @@ return new class extends Migration
             $table->string('color');
             $table->string('cover')->nullable();
             $table->integer('promo')->nullable();
-            $table->foreignId('category_id')->nullable();
-            $table->foreignId('color_id')->nullable();
+            $table->foreignId('category_id')->nullable()->constrained()->nullOnDelete();
         });
     }
 

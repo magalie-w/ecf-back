@@ -25,15 +25,21 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        Product::factory()
-        ->count(10)
-        ->create();
-
-        Category::factory()
-        ->count(1)
+        
+        $categories = Category::factory() 
+        ->count(5)
         ->create();
 
         Color::factory()
+        ->count(5)
         ->create();
+
+        $products = Product::factory()
+        ->count(10)
+        ->create(function () use ($categories) {
+            return ['category_id' => $categories->random()];
+        });
+
+
     }
 }

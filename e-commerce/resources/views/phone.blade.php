@@ -101,7 +101,6 @@
 
                     {{-- TELEPHONES --}}
                     @foreach ($products as $product)
-                    {{-- @foreach ($categories as $category) --}}
 
                         <div class="w-[300px]">
                             <div class="w-[280px] h-[200px] bg-zinc-300">
@@ -117,7 +116,6 @@
                                 <button type="button" class="bg-red-500 py-2 px-5 rounded">Ajouter</button>
                             </div>
                         </div>
-                    {{-- @endforeach --}}
                     @endforeach
 
                     {{-- <div class="w-[300px]">
@@ -164,5 +162,11 @@
                     </div> --}}
                 </div>
             </div>
+
+            {{-- PAGINATION --}}
+            <div class="flex justify-center">
+                {{ $products->links() }}
+            </div>
         </div>
+
 @endsection

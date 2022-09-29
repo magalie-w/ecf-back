@@ -31,7 +31,7 @@ class ProductFactory extends Factory
             // 'cover' => $cover[array_rand($cover)],
             'promo' => fake()->numberBetween(0, 100),
             'category_id' => Category::factory(),
-            'color_id' => Color::factory(),
+            //'color_id' => Color::factory(),
         ];
     }
 

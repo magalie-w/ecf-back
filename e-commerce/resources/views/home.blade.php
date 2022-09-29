@@ -18,8 +18,9 @@
 
         {{-- COUP DE COEUR --}}
         <div class="mx-[200px] flex justify-around">
-            <div class="w-[1000px] h-[400px] bg-blue-100">
 
+            <div class="w-[1000px] h-[400px] bg-blue-100">
+                <p></p>
             </div>
 
             <div class="w-[300px] h-[50px] bg-blue-100">

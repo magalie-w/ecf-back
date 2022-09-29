@@ -17,6 +17,11 @@ return new class extends Migration
             $table->id();
             $table->string('color');
         });
+
+        Schema::create('color_product', function (Blueprint $table) {
+            $table->foreignId('color_id')->constrained()->cascadeOnDelete();
+            $table->string('product_id')->constrained()->cascadeOnDelete();
+        });
     }
 
     /**
@@ -27,5 +32,6 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('colors');
+        Schema::dropIfExists('color_produt');
     }
 };

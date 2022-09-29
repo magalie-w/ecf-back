@@ -11,7 +11,7 @@ class PhoneController extends Controller
     public function index()
     {
         return view('phone', [
-            'products' => Product::all(),
+            'products' => Product::paginate(6),
             'categories' => Category::all(),
         ]);
     }
