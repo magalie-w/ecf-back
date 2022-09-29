@@ -26,8 +26,9 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/phone', [PhoneController::class, 'index'])->name('phone');
 Route::get('/phone', [PhoneController::class, 'index'])->name('phone');
 
-Route::get('/contact', [ContactController::class, 'index'])->name('contact');
-
 Route::get('/connexion', [ConnexionController::class, 'index'])->name('connexion');
 
 Route::get('/inscription', [InscriptionController::class, 'index'])->name('inscription');
+
+Route::get('/contact', [ContactController::class, 'createForm']);
+Route::post('/contact', [ContactController::class, 'contact'])->name('contact.store');

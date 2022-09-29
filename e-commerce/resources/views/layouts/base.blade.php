@@ -27,7 +27,7 @@
                     </li>
 
                     <li>
-                        <a href="{{ route('contact') }}">Contact</a>
+                        <a href="{{ route('contact.store') }}">Contact</a>
                     </li>
                 </ul>
             </div>
